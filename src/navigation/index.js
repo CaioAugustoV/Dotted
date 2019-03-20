@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, createStackNavigator, createSwitchNavigator, createAppContainer } from 'react-navigation';
+import { SafeAreaView, createSwitchNavigator, createAppContainer } from 'react-navigation';
 import { Platform } from 'react-native';
 import screens from '../screens';
 
@@ -11,7 +11,10 @@ import screens from '../screens';
   const defaultStack = createSwitchNavigator(
     {
       AppInitial: {
-        screen: screens.AppInitialScreen, // 0
+        screen: screens.AppInitialScreen,
+      },
+      FaseOne: {
+        screen: screens.FaseOneScreen,
       },
     },
     {

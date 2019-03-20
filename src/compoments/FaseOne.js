@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import { withNavigation } from 'react-navigation';
 
-export default class App extends Component {
+class App extends Component {
   constructor(props){
     super(props)
     state = {
@@ -154,6 +155,8 @@ export default class App extends Component {
     );
   }
 }
+
+export default withNavigation(App)
 
 const styles = StyleSheet.create({
   container: {
