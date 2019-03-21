@@ -17,7 +17,7 @@ class App extends Component {
       seven: '',
       eight: '',
       nine: '',
-      points: 0,
+      points: 'x',
     }
   }
   selectBlock = ( number, colorBlock, value) => {
@@ -65,39 +65,53 @@ class App extends Component {
   }
   memory = (val) => {
     this.setState({
-      points: this.state.points + val
+      points: `${this.state.points} ${val}`
     }, () => {
       switch (this.state.points) {
-        case 11:
-        //  alert("TO NO UM")
+        case 'x a':
+        //  alert(this.state.points)
         break;
-        case 33:
-        //  alert("TO NO 2")
+        case 'x a b':
+        //  alert(this.state.points)
         break;
-        case 66:
-        //  alert("TO NO 3")
+        case 'x a b c':
+        //  alert(this.state.points)
         break;
-        case 110:
-        //  alert("TO NO 4")
+        case 'x a b c d':
+        //  alert(this.state.points)
         break;
-        case 165:
-        //  alert("TO NO 5")
+        case 'x a b c d e':
+        //  alert(this.state.points)
         break;
-        case 231:
-        //  alert("TO NO 6")
+        case 'x a b c d e f':
+        //  alert(this.state.points)
         break;
-        case 308:
-        //  alert("TO NO 7")
+        case 'x a b c d e f g':
+        //  alert(this.state.points)
         break;
-        case 396:
-        //  alert("TO NO 8")
+        case 'x a b c d e f g h':
+        //  alert(this.state.points)
         break;
-        case 495:
-         alert("Parabens você ganhou")
+        case 'x a b c d e f g h i':
+        this.setState({
+          points: 'x',
+          one: 'red',
+          two: 'red',
+          three: 'red',
+          four: 'red',
+          five: 'red',
+          six: 'red',
+          seven: 'red',
+          eight: 'red',
+          nine: 'red',
+        }, () => {
+          alert("Parabens você ganhou")
+          // alert(this.state.points)
+        })
         break;
         default:
           this.setState({
-            points: 0,
+            points: 'x',
             one: 'red',
             two: 'red',
             three: 'red',
@@ -108,7 +122,8 @@ class App extends Component {
             eight: 'red',
             nine: 'red',
           }, () => {
-            alert("Você Perdeu!")
+          // alert(this.state.points)
+          alert("Você Perdeu!")
           })
         break;
       }
@@ -125,7 +140,7 @@ class App extends Component {
       seven: 'red',
       eight: 'red',
       nine: 'red',
-      points: 0,
+      points: 'x',
     })
   };
   
@@ -134,23 +149,23 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.containerBlock}>
-          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.one}`}]} onPress={ () => this.selectBlock('one', 'white', 11)}>
+          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.one}`}]} onPress={ () => this.selectBlock('one', 'white', 'a')}>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.two}`}]} onPress={ () => this.selectBlock('two', 'white', 55)}>
+          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.two}`}]} onPress={ () => this.selectBlock('two', 'white', 'e')}>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.three}`}]} onPress={ () => this.selectBlock('three', 'white', 33)}>
+          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.three}`}]} onPress={ () => this.selectBlock('three', 'white', 'c')}>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.four}`}]} onPress={ () => this.selectBlock('four', 'white', 88)}>
+          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.four}`}]} onPress={ () => this.selectBlock('four', 'white', 'h')}>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.five}`}]} onPress={ () => this.selectBlock('five', 'white', 99)}>
+          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.five}`}]} onPress={ () => this.selectBlock('five', 'white', 'i')}>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.six}`}]} onPress={ () => this.selectBlock('six', 'white', 77)}>
+          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.six}`}]} onPress={ () => this.selectBlock('six', 'white', 'g')}>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.seven}`}]} onPress={ () => this.selectBlock('seven', 'white', 44)}>
+          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.seven}`}]} onPress={ () => this.selectBlock('seven', 'white', 'd')}>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.eight}`}]} onPress={ () => this.selectBlock('eight', 'white', 66)}>
+          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.eight}`}]} onPress={ () => this.selectBlock('eight', 'white', 'f')}>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.nine}`}]} onPress={ () => this.selectBlock('nine', 'white', 22)}>
+          <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.nine}`}]} onPress={ () => this.selectBlock('nine', 'white', 'b')}>
           </TouchableOpacity>
         </View>
         <View style={styles.footer}>
