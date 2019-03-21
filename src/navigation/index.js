@@ -2,19 +2,26 @@ import React from 'react';
 import { SafeAreaView, createSwitchNavigator, createAppContainer } from 'react-navigation';
 import { Platform } from 'react-native';
 import screens from '../screens';
-
+import { FluidNavigator, Transition } from 'react-navigation-fluid-transitions';
   // We already have a status bar from expo
   if (Platform.OS === 'android') {
     SafeAreaView.setStatusBarHeight(0);
   }
   
-  const defaultStack = createSwitchNavigator(
+  const defaultStack = FluidNavigator(
     {
       AppInitial: {
         screen: screens.AppInitialScreen,
       },
       FaseOne: {
         screen: screens.FaseOneScreen,
+      },
+
+
+
+      // Share Element
+      ShareLogoHeader: {
+        screen: screens.ShareLogoHeaderScreen,
       },
     },
     {
@@ -25,4 +32,3 @@ import screens from '../screens';
   const HomeScreenRouter = createAppContainer(defaultStack);
   
 export default HomeScreenRouter;
-  

@@ -13,6 +13,7 @@
     "react-native-cli": "^2.0.1",
     "react-native-gesture-handler": "~1.0.14",
     "react-navigation": "^3.4.1",
+    "react-navigation-fluid-transitions": "^0.3.1",
     "reactotron-react-native": "^3.2.1"
   },
   "devDependencies": {

@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import { withNavigation } from 'react-navigation';
+import { Transition } from 'react-navigation-fluid-transitions';
 
 import FooterButtons from '../compoments/FooterButtons'
+import HeaderButtons from '../compoments/HeaderButtons'
 
 class App extends Component {
   constructor(props){
@@ -148,6 +150,9 @@ class App extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <View style={styles.header}>
+          <HeaderButtons />
+        </View>
         <View style={styles.containerBlock}>
           <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.one}`}]} onPress={ () => this.selectBlock('one', 'white', 'a')}>
           </TouchableOpacity>
@@ -213,5 +218,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     position: 'absolute',
     bottom: 0,
+  },
+  header: {
+    flexDirection: 'row',
+    position: 'absolute',
+    top: 0,
   }
 });

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Image, StyleSheet, StatusBar, View, TouchableOpacity} from 'react-native';
 import { withNavigation } from 'react-navigation';
+import { Transition } from 'react-navigation-fluid-transitions';
 
 import FadeInView from './FadeIn'
 
@@ -9,10 +10,12 @@ class InitialScreen extends Component {
     return (
       <View style={styles.container}>
         <FadeInView style={{width: 200, height: 200 }}>
-          <Image
-            style={styles.androidLogo}
-            source={require('../static/images/android.png')}
-          />
+          <Transition shared="logo">
+            <Image
+              style={styles.androidLogo}
+              source={require('../static/images/android.png')}
+            />
+          </Transition>
         </FadeInView>
         <FadeInView style={{width: 80, height: 80 }}>
           <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('FaseOne')}>
