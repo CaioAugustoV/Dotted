@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import { withNavigation } from 'react-navigation';
+
+import FooterButtons from '../compoments/FooterButtons'
 
 class App extends Component {
   constructor(props){
@@ -151,6 +153,9 @@ class App extends Component {
           <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.nine}`}]} onPress={ () => this.selectBlock('nine', 'white', 22)}>
           </TouchableOpacity>
         </View>
+        <View style={styles.footer}>
+          <FooterButtons />
+        </View>
       </View>
     );
   }
@@ -164,7 +169,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#000',
+    backgroundColor: '#fff',
   },
   containerBlock: {
     width: 210,
@@ -189,4 +194,9 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  footer: {
+    flexDirection: 'row',
+    position: 'absolute',
+    bottom: 0,
+  }
 });
