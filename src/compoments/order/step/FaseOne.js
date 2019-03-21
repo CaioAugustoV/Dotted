@@ -23,7 +23,7 @@ class App extends Component {
   selectBlock = ( number, colorBlock, value) => {
     switch (number) {
       case 'one':
-        this.state.one == 'red' ? this.setState({ one: colorBlock }) : this.setState({ one: 'red' })
+        this.state.one == 'green' ? this.setState({ one: colorBlock }) : this.setState({ one: 'green' })
         this.memory(value)
       break;
       case 'two':
@@ -95,7 +95,7 @@ class App extends Component {
         case 'x a b c d e f g h i':
         this.setState({
           points: 'x',
-          one: 'red',
+          one: 'green',
           two: 'red',
           three: 'red',
           four: 'red',
@@ -112,7 +112,7 @@ class App extends Component {
         default:
           this.setState({
             points: 'x',
-            one: 'red',
+            one: 'green',
             two: 'red',
             three: 'red',
             four: 'red',
@@ -131,7 +131,7 @@ class App extends Component {
   }
   componentWillMount = () => {
     this.setState({
-      one: 'red',
+      one: 'green',
       two: 'red',
       three: 'red',
       four: 'red',
