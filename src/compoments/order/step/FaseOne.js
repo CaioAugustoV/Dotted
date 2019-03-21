@@ -123,7 +123,7 @@ class App extends Component {
             nine: 'red',
           }, () => {
           // alert(this.state.points)
-          alert("Você Perdeu!")
+          alert("Você Perd  eu!")
           })
         break;
       }
