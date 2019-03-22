@@ -15,7 +15,7 @@ class FooterButtons extends Component {
 					<Text style={styles.textButton}>PREV</Text>
 				</TouchableOpacity>
 				
-				<TouchableOpacity disabled={true} style={styles.containerButtons} onPress={() => this.props.navigation.navigate('AppInitial')}>
+				<TouchableOpacity style={styles.containerButtons} onPress={() => this.props.navigation.navigate('Hash')}>
 					<Text style={styles.textButton}>NEXT</Text>
 					<View style={styles.button}>
 						<Image style={styles.arrowLeft} source={require('../../../static/images/arrow.png')} />
