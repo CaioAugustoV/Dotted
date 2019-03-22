@@ -13,6 +13,9 @@ import { FluidNavigator, Transition } from 'react-navigation-fluid-transitions';
       AppInitial: {
         screen: screens.AppInitialScreen,
       },
+      Hash: {
+        screen: screens.HashScreen,
+      },
       FaseOne: {
         screen: screens.FaseOneScreen,
       },
