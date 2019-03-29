@@ -9,14 +9,14 @@ class InitialScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <FadeInView style={{width: 200, height: 200 }}>
+        {/* <FadeInView style={{width: 200, height: 200 }}> */}
           <Transition shared="logo">
             <Image
               style={styles.androidLogo}
               source={require('../static/images/android.png')}
             />
           </Transition>
-        </FadeInView>
+        {/* </FadeInView> */}
         <FadeInView style={{width: 80, height: 80 }}>
           <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('FaseOne')}>
             <Image

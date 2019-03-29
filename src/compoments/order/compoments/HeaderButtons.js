@@ -29,8 +29,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#fff',
     width: width,
-    padding: 10,
-    paddingTop: 30,
+    marginTop: 30,
+    margin: 10,
   },
   androidLogo: {
     width: 60,

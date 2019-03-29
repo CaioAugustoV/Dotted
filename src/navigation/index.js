@@ -22,13 +22,21 @@ import { FluidNavigator, Transition } from 'react-navigation-fluid-transitions';
 
 
 
+      testFiduc: {
+        screen: screens.testFiducScreen,
+      },
+      testFiducTwo: {
+        screen: screens.testFiducTwoScreen,
+      },
+
+
       // Share Element
       ShareLogoHeader: {
         screen: screens.ShareLogoHeaderScreen,
       },
     },
     {
-      initialRouteName: 'AppInitial',
+      initialRouteName: 'testFiduc',
     }
   );
   

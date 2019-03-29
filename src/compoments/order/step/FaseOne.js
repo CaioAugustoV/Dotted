@@ -150,9 +150,9 @@ class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.header}>
-          <HeaderButtons />
-        </View>
+          <View style={styles.header}>
+            <HeaderButtons />
+          </View>
         <View style={styles.containerBlock}>
           <TouchableOpacity style={[styles.block, {backgroundColor: `${this.state.one}`}]} onPress={ () => this.selectBlock('one', 'white', 'a')}>
           </TouchableOpacity>
@@ -186,7 +186,7 @@ export default withNavigation(App)
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#fff',
@@ -220,7 +220,6 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
   header: {
-    flexDirection: 'row',
     position: 'absolute',
     top: 0,
   }
