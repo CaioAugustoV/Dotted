@@ -19,24 +19,23 @@ import { FluidNavigator, Transition } from 'react-navigation-fluid-transitions';
       FaseOne: {
         screen: screens.FaseOneScreen,
       },
-
-
-
+      Math: {
+        screen: screens.MathScreen,
+      },
+      // Share Element
+      ShareLogoHeader: {
+        screen: screens.ShareLogoHeaderScreen,
+      },
+      // TESTEFIDUC
       testFiduc: {
         screen: screens.testFiducScreen,
       },
       testFiducTwo: {
         screen: screens.testFiducTwoScreen,
       },
-
-
-      // Share Element
-      ShareLogoHeader: {
-        screen: screens.ShareLogoHeaderScreen,
-      },
     },
     {
-      initialRouteName: 'testFiduc',
+      initialRouteName: 'Math',
     }
   );
   
