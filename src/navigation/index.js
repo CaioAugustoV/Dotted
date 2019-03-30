@@ -13,6 +13,9 @@ import { FluidNavigator, Transition } from 'react-navigation-fluid-transitions';
       AppInitial: {
         screen: screens.AppInitialScreen,
       },
+      SelectGame: {
+        screen: screens.SelectGameScreen,
+      },
       Hash: {
         screen: screens.HashScreen,
       },
@@ -35,7 +38,7 @@ import { FluidNavigator, Transition } from 'react-navigation-fluid-transitions';
       },
     },
     {
-      initialRouteName: 'Math',
+      initialRouteName: 'AppInitial',
     }
   );
   

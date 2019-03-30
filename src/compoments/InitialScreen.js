@@ -18,7 +18,7 @@ class InitialScreen extends Component {
           </Transition>
         {/* </FadeInView> */}
         <FadeInView style={{width: 80, height: 80 }}>
-          <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('FaseOne')}>
+          <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('SelectGame')}>
             <Image
               style={styles.playButton}
               source={require('../static/images/play-button.png')}

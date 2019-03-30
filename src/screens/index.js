@@ -1,4 +1,5 @@
 import AppInitialScreen from './AppInitialScreen';
+import SelectGameScreen from './SelectGameScreen';
 import FaseOneScreen from './FaseOneScreen';
 import ShareLogoHeaderScreen from './ShareLogoHeaderScreen';
 import HashScreen from './HashScreen';
@@ -16,6 +17,7 @@ export default {
   ShareLogoHeaderScreen,
   HashScreen,
   MathScreen,
+  SelectGameScreen,
 
 
 
